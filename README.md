@@ -1,30 +1,15 @@
----
-license: cc-by-4.0
-language:
-- en
-task_categories:
-- text-generation
-tags:
-- finance
-- ai-safety
-- monitoring-conditional-behavior
-- situational-awareness
-- tool-use
-- function-calling
-size_categories:
-- n<1K
-configs:
-- config_name: default
-  data_files:
-  - split: train
-    path: train.jsonl
-  - split: test
-    path: test.jsonl
-- config_name: multiturn
-  data_files:
-  - split: test
-    path: multiturn_test.jsonl
----
+## Hugging Face and Adaption version
+
+The original benchmark is available on Hugging Face as:
+
+`ML0037/finance-situational-awareness-agent`
+
+I also tested Adaption's **Adapt My Data** service on this dataset. The dataset received an A grade, but the adapted version still improved the benchmark by 11% using the Reasoning Traces feature. That version is available here:
+
+`ML0037/adaption-finance-situational-awareness-bench`
+
+This makes the repository the main implementation and evaluation code, while the Hugging Face datasets provide the benchmark data and the adapted release.
+
 
 # Finance Situational Awareness Agent — Monitoring-Conditional Behavior Benchmark
 
